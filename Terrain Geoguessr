@@ -1,0 +1,66 @@
+
+Terrain geoguessr:
+
+
+- integrate plugin that displays elevation in rgb
+    + create label on side that indicates elevation range in map area
+
+- make sure map is accessibility prioritized
+- async load up main map, if only to show off that I can do it.
+    + can potentially take a sec to load if running land check on continent polys needs to be repeated a bunch
+
+
+
+
+
+You start zoomed into a certain spot. You've got x amount of time to figure out where you are. Points awarded based on distance from starting location. Everytime you zoom out past original scope, you lose a certain amount of points. 
+
+Features needed: 
+- main map section that displays terrain
+- height indicators
+- scale
+- buttons to indicate zoom in/out and warning to indicate if next zoom out will cause point penalty
+- return to start button
+- normal map popout where you can pinpoint where you are
+- menu
+- other pages:
+    + about
+    + how to play
+    + start a new game
+    
+
+
+Features wanted:
+
+- toggling other geographic features for a points penalty (helps people get a chance for some points if they're completely lost with not much time left)
+    + waterbody names
+    + roads
+    + city names
+    + lat or long (for obviously huge point penalties)
+
+- change density of topographic lines for more/less points
+- ability to change orientation
+- user accounts and allow tracking info
+
+
+
+Considerations:
+
+- best way to display terrain? 
+    + color code with bar on the side indicating heights
+    + topo lines
+    + hillshading, but not sure how values should be transmitted
+    + should there be satellite imagery underneath?
+
+
+other thoughts: 
+- the way this map displays the esri/imagery feature seems like a potentially good place to start: https://en-ca.topographic-map.com/maps/m1u/Wisconsin/
+
+
+value that holds location clicked on in streets map
+calculate distance between this value and startingLocation
+
+why are maps not properly showing whole world? investigate that css issue
+
+
+

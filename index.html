@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel ="stylesheet" href= "styles.css" />
+  <script src="continents.json"></script>
+  <!--Libraries and Plugins -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/leaflet-topography" type="text/javascript"></script>
+  <script src="circle-progress.min.js"></script>
+  <script src="https://unpkg.com/@mapbox/leaflet-pip@latest/leaflet-pip.js"></script>
+  <!-- Favicon links -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Title -->
+  <title>TerrainGuessr</title>
+</head>
+<body>
+  <div class = "header">
+      <img src="images/terrain_icon_white.png" class="header-img" alt="terrain_marker_icon"/><h2>Terrain Guessr</h2>
+  </div>
+
+  <div class="main-content">
+  <!-- Maps -->
+      <div id="satMapId"></div>
+    <div id="outerStreet">
+      <div id="streetMapId"></div>
+    </div>
+
+<!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-txt">
+        How To Play
+      </div>
+            <a class="sidebar-btn" id="welcomeBtn"><br /><i class="material-icons">help</i></a>
+    </div>
+
+    <div class="sidebar-btn-wrapper" >
+      <span class="zoom-txt"> Zoom lvl  </span>
+      <div class="progress"></div>
+              <span class="zoom-txt" id="minZoom"> Min zoom <br /> lvl: </span>
+    </div>
+
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-txt">
+        Take Your Guess
+      </div>
+      <a class="sidebar-btn distBtn" id="scoreBtn" ><br  /><i class="material-icons" onclick=distanceText();>travel_explore</i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal content -->
+
+<!-- How to play modal -->
+  <div id="welcomeModal" class="modal">
+    <div class="modal-content">
+        <span class="close"> &times; </span>
+        <p>
+          Welcome!
+        </p>
+        <p>
+          I was inspired by one of my favorite games, GeoGuessr, to make a terrain based version.
+        </p>
+        <p>
+          For those unfamiliar, the idea is that you try to figure out where you are in the world by scrolling around the large map (or google's street view in GeoGuessr).
+          When you're ready to take a guess, mark your spot on the smaller street map on the right side of your screen and then click on the globe search button in the bottom right.
+          <p>
+            Your score is based on how far your guess is from the starting marker.
+            You can zoom out, but beware! Each time you zoom out, your score is penalized by 20%.
+          </p>
+          </p>
+        <p>
+          Thanks for checking out this fun little project. I was curious how hard it would be to place yourself if you were dropped somewhere on the earth and had only a topographic map to guide you.
+          I think there's a lot of insight to be gained from looking at the world through a topographic lens.
+          This applies mostly to the natural world, but you can also see how variations in the earth's surface influence the diverse cultures in our world.
+          Hope you enjoy!
+        </p>
+        <p>
+          If you liked this game, consider <a class="text-link" href= "https://www.buymeacoffee.com/LevBakin">buying me a coffee</a> or donating to one of my favorite non-profits, <a class="text-link" href="https://www.unitedwaydanecounty.org/">United Way of Dane County</a>.
+        </p>
+        <p>
+          - Lev
+        <button id="closeBtn">Close</button>
+    </div>
+  </div>
+
+<!-- Score modal -->
+    <div id="scoreModal" class="modal">
+      <div class="modal-content">
+          <div id ="scoreMap"></div>
+          <p id="distanceTextId"> </p>
+        <div id="score">
+          <div id="scoreBar"></div>
+        </div>
+        <button id="Refresh" onclick=location.reload()>Try Again</button>
+      </div>
+    </div>
+  <script src= "index.js"></script>
+
+</body>
+</html>

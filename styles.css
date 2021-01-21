@@ -1,0 +1,266 @@
+body {
+  background-color: #355c7d;
+  background-image: url('images/background_simple_geo.png');
+  background-size: cover;
+  margin: 0;
+}
+
+html, body {
+  font-family: 'Lato', sans-serif;
+  height: 100%;
+  min-height: 600px;
+  min-width: 1100px;
+  width: 100%;
+}
+
+button {
+  background-color: #6e4277;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: inherit;
+  margin: 25px auto 15px ;
+  padding: 5px 15px;
+}
+
+button:hover {
+  background-color: #57345e;
+  cursor: pointer;
+}
+
+h2 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  line-height: 0.8;
+  text-shadow: 1px 1px black;
+}
+
+.text-link {
+  color: #311d35;
+}
+
+.text-link:hover {
+  background-color: #ff818f;
+}
+
+.header {
+  display: inline-block;
+  height: 45px;
+  left: 35%;
+  margin: 5px;
+  position: absolute;
+  top: 0px;
+  width: 250px;
+  z-index: 1;
+}
+
+.header-img {
+  left: 0px;
+  margin: 5px;
+  width: 50px;
+}
+
+.main-content {
+  background-color: #6c5b7b;
+  box-shadow: 20px 20px 150px black;
+  display: flex;
+  height: 85%;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-47%);
+  width: 90%;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+  background-color: #6e4277;
+  min-width: 110px;
+  overflow: auto;
+  width: 10%;
+}
+
+.sidebar-btn-wrapper {
+  color: #ff7685;
+  display: block;
+  height: 33.3%;
+  line-height: 0.5;
+  position: relative;
+  text-align: center;
+  text-shadow: 1px 1px 2px #372845bf;
+  width: 100%;
+}
+
+.sidebar-txt {
+  color: white;
+  font-size: 3vh;
+  line-height: 1.2;
+  padding: 25px 15px 0 15px;
+}
+
+.sidebar-btn {
+  cursor: pointer;
+}
+
+i.material-icons {
+  font-size: 5vh;
+}
+
+.material-icons:hover {
+  color: #ff818f;
+  font-size: 5.2vh;
+}
+
+
+/* Zoomers */
+
+.circle-progress {
+  border-radius: 1000px;
+  box-shadow: 1px 1px 1px black;
+}
+
+.circle-progress-value {
+	stroke: hsl(353.3, 100%, 75.3%);
+	stroke-dasharray: 4 0;
+  stroke-width: 6px;
+}
+
+.circle-progress-circle {
+	stroke: #eee;
+	stroke-width: 6px;
+}
+
+.circle-progress-text {
+	fill: hsl(180, 80%, 47%);
+	font-weight: bold;
+}
+
+.progress {
+  padding: 10px 0;
+}
+
+.zoom-txt {
+  color: white;
+  line-height: 1;
+}
+
+/* Modals */
+.modal {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  height: 100%; /* Full height */
+  left: 0;
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 100px; /* Location of the box */
+  position: fixed; /* Stay in place */
+  top: 0;
+  width: 100%; /* Full width */
+  z-index: 10; /* Sit on top */
+}
+
+
+.modal-content {
+  background-color: #e9e6dd;
+  border: 2px solid #355c7d;
+  border-radius: 50px;
+  box-shadow: 5px 5px 30px black;
+  color: black;
+  font-size: 20px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  text-shadow: none;
+  width: 80%;
+}
+
+
+/*Close*/
+
+.close {
+  border: 1px solid #6e4277;
+  border-radius: 50px;
+  color: #6e4277;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.close:hover,
+.close:focus {
+  background-color: #ddd9ca;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+/*Maps styling*/
+
+#satMapId {
+  height: 100%;
+  position: relative;
+  width: 90%;
+  z-index: 1;
+}
+
+#outerStreet {
+  border: 1px solid #355c7d;
+  border-radius: 5px;
+  direction: rtl;
+  height: 25%;
+  max-height: 70%;
+  margin: 1%;
+  opacity: 0.6;
+  overflow: auto;
+  position: absolute;
+  resize: both;
+  right: 10%;
+  top: 20%;
+  width: 15%;
+  z-index: 5;
+}
+
+#outerStreet:hover {
+  opacity: 1;
+}
+
+#streetMapId {
+  height: 100%;
+  width: 100%;
+}
+
+#scoreMap {
+  border: 1px solid black;
+  height: 50vh;
+  margin: 3vh auto;
+  width: 70vh;
+}
+
+
+/* Score Section */
+
+#score {
+  background-color: white;
+  border: 2px solid black;
+  margin: 5px auto;
+  width: 40%;
+}
+
+#distanceTextId {
+  text-align: center;
+}
+
+#scoreBar {
+  background-color: green;
+  color: aliceblue;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 1%;
+}
