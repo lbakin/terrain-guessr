@@ -149,8 +149,12 @@ mySatMap.on('zoom', function(ev){
   if (minZoom > mySatMap._zoom) {
     minZoom = mySatMap._zoom;
     document.getElementById('minZoom').innerHTML = "New min zoom lvl: " + minZoom;
+    zoomMod = 1 - (8 - minZoom) * 0.2;
+    document.getElementById('zoomMod').innerHTML = Math.round(zoomMod*100);
   }
 });
+
+
 
 // Time to score!
 var clickLocation = [];
