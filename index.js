@@ -122,6 +122,12 @@ var myStreetMap = L.map('streetMapId', {
 streetLayer.addTo(myStreetMap);
 
 
+//reset map view to origin. used for map button
+
+function recenterMapView() {
+  mySatMap.setView(startingLocation);
+}
+
 // Event Listeners //
 
 function onMapClick(e) {
@@ -150,7 +156,8 @@ mySatMap.on('zoom', function(ev){
     minZoom = mySatMap._zoom;
     document.getElementById('minZoom').innerHTML = "New min zoom lvl: " + minZoom;
     zoomMod = 1 - (8 - minZoom) * 0.2;
-    document.getElementById('zoomMod').innerHTML = Math.round(zoomMod*100);
+    if (zoomMod < 0) {zoomMod = 0;}
+    document.getElementById('zoomMod').innerHTML = zoomMod.toPrecision(1);
   }
 });
 

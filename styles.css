@@ -38,6 +38,16 @@ h2 {
   text-shadow: 1px 1px black;
 }
 
+footer {
+  bottom: 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  margin-bottom: 5px;
+  color: #eeebe2;
+  z-index: -1;
+}
+
 .text-link {
   color: #311d35;
 }
@@ -74,6 +84,11 @@ h2 {
   transform: translateY(-47%);
   width: 90%;
 }
+
+.easy-button-button {
+  margin: 0;
+}
+
 
 
 /* Sidebar */
@@ -115,6 +130,7 @@ i.material-icons {
   color: #ff818f;
   font-size: 5.2vh;
 }
+
 
 
 /* Zoomers */
@@ -201,6 +217,26 @@ i.material-icons {
 
 
 /*Maps styling*/
+
+i.map-button {
+  background-clip: padding-box;
+  background-color: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-size: 26px;
+  left: 10px;
+  padding: 2px;
+  position: absolute;
+  cursor: pointer;
+  top: 100px;
+  z-index: 500;
+}
+
+i.map-button:hover {
+  background-color: #f4f4f4;
+  color: black;
+  font-size: 26px;
+}
 
 #satMapId {
   height: 100%;

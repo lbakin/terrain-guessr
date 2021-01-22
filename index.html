@@ -21,6 +21,8 @@
   <script src="https://unpkg.com/leaflet-topography" type="text/javascript"></script>
   <script src="circle-progress.min.js"></script>
   <script src="https://unpkg.com/@mapbox/leaflet-pip@latest/leaflet-pip.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
   <!-- Favicon links -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
@@ -29,6 +31,7 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+
   <!-- Title -->
   <title>TerrainGuessr</title>
 </head>
@@ -39,7 +42,11 @@
 
   <div class="main-content">
   <!-- Maps -->
-      <div id="satMapId"></div>
+      <div id="satMapId">
+
+      </div>
+      <a onclick=recenterMapView(); title="Reset To Origin"><i id="mapButton" class="material-icons map-button">my_location</i></a>
+
     <div id="outerStreet">
       <div id="streetMapId"></div>
     </div>
@@ -57,8 +64,8 @@
       <span class="zoom-txt"> Zoom lvl  </span>
       <div class="progress"></div>
               <span class="zoom-txt" id="minZoom"> Min zoom <br /> lvl: </span>
-              <br />
-              <span class="zoom-txt">Zoom Mod: <span id="zoomMod">100</span>%</span>
+              <p />
+              <span class="zoom-txt">Score Mod: x<span id="zoomMod">1.0</span></span>
     </div>
 
     <div class="sidebar-btn-wrapper">
@@ -116,6 +123,13 @@
         <button id="Refresh" onclick=location.reload()>Try Again</button>
       </div>
     </div>
+
+    <footer id="coprYear">
+      <script>
+      var currentYear = new Date().getFullYear();
+        document.getElementById("coprYear").innerHTML = "&#169; Copyright " + currentYear + " by Lev Bakin";
+      </script>
+    </footer>
   <script src= "index.js"></script>
 
 </body>
