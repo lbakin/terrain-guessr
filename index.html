@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
@@ -45,7 +44,7 @@
       <div id="satMapId">
 
       </div>
-      <a onclick=recenterMapView(); title="Reset To Origin"><i id="mapButton" class="material-icons map-button">my_location</i></a>
+      <a onclick=recenterMapView(); title="Reset to origin"><i id="mapButton" class="material-icons map-button">my_location</i></a>
 
     <div id="outerStreet">
       <div id="streetMapId"></div>
@@ -57,7 +56,7 @@
       <div class="sidebar-txt">
         How To Play
       </div>
-            <a class="sidebar-btn" id="welcomeBtn"><br /><i class="material-icons">help</i></a>
+            <a class="sidebar-btn" id="welcomeBtn" title ="How to play"><br /><i class="material-icons">help</i></a>
     </div>
 
     <div class="sidebar-btn-wrapper" >
@@ -72,7 +71,7 @@
       <div class="sidebar-txt">
         Take Your Guess
       </div>
-      <a class="sidebar-btn distBtn" id="scoreBtn" ><br  /><i class="material-icons" onclick=distanceText();>travel_explore</i></a>
+      <a class="sidebar-btn distBtn" id="scoreBtn" title="Find out how close you were"><br  /><i class="material-icons" onclick=distanceText();>travel_explore</i></a>
     </div>
   </div>
 </div>
@@ -124,10 +123,11 @@
       </div>
     </div>
 
-    <footer id="coprYear">
+    <footer >
+      &#169; Copyright <span id="coprYear"></span> by <a href="https://lbakin.github.io" class= "footer-link" title="Visit Lev's portfolio site">Lev Bakin</a>
       <script>
       var currentYear = new Date().getFullYear();
-        document.getElementById("coprYear").innerHTML = "&#169; Copyright " + currentYear + " by Lev Bakin";
+        document.getElementById("coprYear").innerHTML = currentYear;
       </script>
     </footer>
   <script src= "index.js"></script>

@@ -3,6 +3,8 @@ body {
   background-image: url('images/background_simple_geo.png');
   background-size: cover;
   margin: 0;
+  position: absolute;
+  z-index: -10;
 }
 
 html, body {
@@ -46,6 +48,10 @@ footer {
   margin-bottom: 5px;
   color: #eeebe2;
   z-index: -1;
+}
+
+.footer-link {
+  color: white;
 }
 
 .text-link {
