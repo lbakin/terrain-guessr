@@ -2,6 +2,8 @@
 
 ## This game can be found at https://terrain-guessr.herokuapp.com
 
+![img](https://github.com/lbakin/lbakin.github.io/blob/master/public/images/portfolio/Terrain-Guessr.png)
+
 ## About this project
 
 ### I was reaching a point in my studying of front-end web development where I didn't think I had any projects that accurately represented both my knowledge and general interests.
