@@ -12,7 +12,7 @@
 
 ## Current Improvement Focus
 
-## Adding a leaderboard and a timer. Currently working on these changes on a local WAMP server. Figuring out how to get the database online is going to be a bit of a challenge, but I think heroku has some decent guides for this.
+### Adding a leaderboard and a timer. Currently working on these changes on a local WAMP server. Figuring out how to get the database online is going to be a bit of a challenge, but I think heroku has some decent guides for this.
 
 ## Next Steps
 
