@@ -306,3 +306,31 @@ i.map-button:hover {
   text-align: center;
   width: 1%;
 }
+
+#mobile-warning {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+@media (max-width: 999px) {
+  #mobile-warning {
+      display: flex; /* Show warning */
+  }
+  .main-content, .header, .sidebar, #satMapId, .modal, .footer {
+      display: none; /* Hide game elements */
+  }
+}
