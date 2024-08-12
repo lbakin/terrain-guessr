@@ -317,7 +317,6 @@ i.map-button:hover {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   z-index: 1000;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
